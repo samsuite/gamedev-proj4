@@ -3,10 +3,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using UnityEngine;
 
+/// <summary>
+/// Static class for saving and loading binary objects. See TextFieldSaveTest for an example of how to save and load objects.
+/// </summary>
 public static class SaveManager {
 	public static  SurrogateSelector Selector = new SurrogateSelector();
 	static SaveManager(){
-		//Surrogotes for non-natively serializable classes can be added here
+		//Custom surrogotes for non-natively serializable classes can be added here
 		Selector.AddSurrogate(typeof(Color32),new StreamingContext(StreamingContextStates.All), new Color32SerializationSurrogate());
 	}
 

@@ -2,8 +2,9 @@
 using UnityEngine.UI;
 using System;
 using System.IO;
-
-//Class for testing saving text in textfield (as a test). Goes on the Text portion of an input field
+/// <summary>
+/// Class for testing saving text in textfield (as a test). Goes on the Text portion of an input field.
+/// </summary>
 [RequireComponent (typeof (InputField))]
 public class TextFieldSaveTest : MonoBehaviour {
 	private string filename = "Scenes/Tests/SaveGame/textfieldTest.dat";
@@ -24,13 +25,11 @@ public class TextFieldSaveTest : MonoBehaviour {
 		String path = Path.Combine(Application.dataPath,filename);
 		TextSaveGame savegame = (TextSaveGame)SaveManager.LoadObject(path);
 		GetComponent<InputField>().text = savegame.text;
-		GetComponent<InputField>().textComponent.verticalOverflow = VerticalWrapMode.Truncate;
-		GetComponent<InputField>().textComponent.verticalOverflow = VerticalWrapMode.Overflow;
-		GetComponent<InputField>().textComponent.text = savegame.text;
 	}
 
-	[Serializable]
+	[Serializable] //All fields not marked as NonSerialzed will attempt to be serialized
 	class TextSaveGame{
+		//Use [NonSerialized] on variables that should not be saved, or are not serializable
 		public string text;
 		public TextSaveGame(string s) {text = s;}
 	}
