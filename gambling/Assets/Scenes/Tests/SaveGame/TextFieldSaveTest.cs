@@ -8,12 +8,10 @@ using System.IO;
 [RequireComponent (typeof (InputField))]
 public class TextFieldSaveTest : MonoBehaviour {
 	private string filename = "Scenes/Tests/SaveGame/textfieldTest.dat";
-	// Use this for initialization
+
 	void Start () {
-	
+	 
 	}
-	
-	// Update is called once per frame
 	void Update () {
 	
 	}
