@@ -18,17 +18,17 @@ public class RaycastSelector : MonoBehaviour {
 				GameObject hitObject = hit.collider.gameObject;
 				if(lastObject != hitObject){
 					PointerExit();
-					hitObject.SendMessage("MouseEnter");
+					hitObject.SendMessage("MouseEnter",SendMessageOptions.DontRequireReceiver);
 				}
 				else{
-					hitObject.SendMessage("MouseOver");
+					hitObject.SendMessage("MouseOver",SendMessageOptions.DontRequireReceiver);
 				}
 
 				if(Input.GetMouseButtonDown(0)){
-					hitObject.SendMessage("MouseDown");
+					hitObject.SendMessage("MouseDown",SendMessageOptions.DontRequireReceiver);
 				}
 				else if(Input.GetMouseButtonUp(0)){
-					hitObject.SendMessage("MouseUp");
+					hitObject.SendMessage("MouseUp",SendMessageOptions.DontRequireReceiver);
 				}
 				lastObject = hitObject;
 			}
@@ -45,7 +45,7 @@ public class RaycastSelector : MonoBehaviour {
 	}
 	private void PointerExit(){
 		if(lastObject != null){
-			lastObject.SendMessage("MouseExit");
+			lastObject.SendMessage("MouseExit",SendMessageOptions.DontRequireReceiver);
 			lastObject = null;
 		}
 	}
