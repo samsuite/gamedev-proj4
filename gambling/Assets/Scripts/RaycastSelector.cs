@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Performs raycasts into the world and sends mouse messages to first object hit if not blocked by a UI element(s).
+/// </summary>
 public class RaycastSelector : MonoBehaviour {
 	
 	public LayerMask layerMask;

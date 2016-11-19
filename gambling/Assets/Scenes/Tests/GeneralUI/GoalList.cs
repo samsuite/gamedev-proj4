@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Text;
 
+/// <summary>
+/// Add and remove strings to the UI as "goals", each goal is prefaced by the bullet string.
+/// </summary>
 [RequireComponent (typeof (Text))]
 public class GoalList : MonoBehaviour {
 
