@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour {
 
 
         ///// MOUSE CONTROL
-        // detects both left and right mouse buttons
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1)){
+        // detects only right mouse button
+        if (Input.GetMouseButton(1)){
 
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

@@ -28,6 +28,9 @@ public class IsometricCamera : MonoBehaviour {
         if (follow){
             location.x = Mathf.Cos(yaw*(Mathf.PI/180f));
             location.z = Mathf.Sin(yaw*(Mathf.PI/180f));
+            location.y = 0f;
+
+            location = location.normalized * Mathf.Cos(pitch*(Mathf.PI/180f));
             location.y = Mathf.Sin(pitch*(Mathf.PI/180f));
 
             location = location.normalized * distance;
