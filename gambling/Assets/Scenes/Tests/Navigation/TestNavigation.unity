@@ -450,9 +450,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.09
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalPosition.y
@@ -460,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 14.44
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalRotation.x
@@ -481,6 +486,76 @@ Prefab:
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: startLocation.x
+      value: 2.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: startLocation.z
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].destination.x
+      value: 3.8085413
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].destination.z
+      value: -5.923093
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].destination.x
+      value: 5.5167327
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].destination.z
+      value: -2.1237998
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].text
+      value: hey what's up
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].destination.x
+      value: 2.6250281
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].destination.z
+      value: 0.7161174
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}

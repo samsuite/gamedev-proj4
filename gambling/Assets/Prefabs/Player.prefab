@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   speed: 200
 --- !u!136 &136000012965425606
 CapsuleCollider:
