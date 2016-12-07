@@ -8,10 +8,12 @@ public class WorldToScreenUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Camera.main.GetComponent<IsometricCamera> ().AfterMove += UpdatePosition;
+		Destroy (gameObject, 3f);
 	}
 	
 	// Update is called once per frame
-	void LateUpdate () {
+	void UpdatePosition () {
 		float z = transform.position.z;
 		Vector3 vec = Camera.main.WorldToScreenPoint(followTransform.position + offset);
 		transform.position = Vector3.Scale(vec,new Vector3(1f,1f,0)) + new Vector3(0,0,z);
@@ -28,5 +30,8 @@ public class WorldToScreenUI : MonoBehaviour {
 			float y = Mathf.Clamp(transform.position.y,size.y * rt.pivot.y,Screen.height - size.y * (1-rt.pivot.y));
 			transform.position = new Vector3(x,y,transform.position.z);
 		}
+	}
+	void OnDestroy(){
+		Camera.main.GetComponent<IsometricCamera> ().AfterMove -= UpdatePosition;
 	}
 }

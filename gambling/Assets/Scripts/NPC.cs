@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 [RequireComponent (typeof (NPCPlanner))]
 public class NPC : MonoBehaviour {
 
-
+	public static GameObject stextBox;
+	public static Transform scanvas;
+	public GameObject textBox;
+	public Transform canvas;
     public float walkSpeed = 10f;
     float turnspeed = 15f;
 
@@ -18,6 +22,12 @@ public class NPC : MonoBehaviour {
 
 
 	void Start () {
+		if (textBox != null)
+			stextBox = textBox;
+
+		if (canvas != null)
+			scanvas = canvas;
+		
         planner = GetComponent<NPCPlanner>();
 	    Act();
 	}
@@ -26,21 +36,29 @@ public class NPC : MonoBehaviour {
         // if we're acting and we're not at the end of the itinerary
         if (acting && act_index < planner.itinerary.Count){
             // do whatever the current item on the itinerary is
-
+			GameObject textBox;
             switch (planner.itinerary[act_index].type){
 
                 // player says something
                 case NPCPlanner.actionType.respond:
 
                     print("player says \""+planner.itinerary[act_index].text+"\"");
+					textBox = (GameObject)GameObject.Instantiate (stextBox, scanvas);
+					textBox.GetComponentInChildren<Text> ().text = planner.itinerary [act_index].text;
+					textBox.GetComponent<WorldToScreenUI> ().followTransform = GameManager.player.transform;
+					textBox.GetComponent<WorldToScreenUI> ().offset = Vector3.up*3;
                     taskcomplete = true;
 
                     break;
 
                 // this NPC says something
-                case NPCPlanner.actionType.talk:
+			case NPCPlanner.actionType.talk:
 
-                    print("says \""+planner.itinerary[act_index].text+"\"");
+				print ("says \"" + planner.itinerary [act_index].text + "\"");
+				textBox = (GameObject)GameObject.Instantiate (stextBox, scanvas);
+				textBox.GetComponentInChildren<Text> ().text = planner.itinerary [act_index].text;
+				textBox.GetComponent<WorldToScreenUI> ().followTransform = transform;
+				textBox.GetComponent<WorldToScreenUI> ().offset = Vector3.up*3;
                     taskcomplete = true;
 
                     break;

@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class IsometricCamera : MonoBehaviour {
-
+	//delegate ()
+	public delegate void MoveEvent();
+	//event
+	public event MoveEvent AfterMove;
     public float pitch = 45f;
     public float yaw = 45f;
     public float distance = 10f;
@@ -17,7 +20,9 @@ public class IsometricCamera : MonoBehaviour {
     [HideInInspector]
     public Transform target;
 
+	void emptyMethod(){}
 	void Start () {
+		AfterMove += emptyMethod;
         location = new Vector3(0f,0f,0f);
 	    target = GameManager.player.transform;
 	}
@@ -39,6 +44,6 @@ public class IsometricCamera : MonoBehaviour {
             transform.position = location;
             transform.LookAt(target.position);
         }
-
+		AfterMove ();
 	}
 }

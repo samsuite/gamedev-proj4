@@ -9483,6 +9483,17 @@ Prefab:
       propertyPath: startLocation.y
       value: 0.08107185
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011011394856, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 299916329}
+    - target: {fileID: 114000011011394856, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 1000013391742680, guid: 758a6b2c3989d6541a328df7797f0828,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
   m_IsPrefabParent: 0
