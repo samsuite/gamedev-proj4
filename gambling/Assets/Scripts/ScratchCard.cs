@@ -17,7 +17,7 @@ public class ScratchCard : MonoBehaviour {
 
 
 	void Start () {
-		GenerateCard (5, 7);
+		GenerateCard (5, 17);
 	}
 
 
