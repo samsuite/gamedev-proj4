@@ -78,7 +78,13 @@ public class NPC : MonoBehaviour {
             }
 
             if (taskcomplete){
-                act_index ++;
+                if (planner.loop){
+                    act_index = (act_index + 1) % planner.itinerary.Count;
+                }
+                else {
+                    act_index ++;
+                }
+
                 BeginTask();
             }
 
