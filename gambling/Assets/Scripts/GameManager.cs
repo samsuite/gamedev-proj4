@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     public static GameObject player;
     public static GameObject camera;
     public static int money = 150;
+    public static int day_index = 0;
     public static int cards_left = 0;
     public static int day = 0;
     public static bool can_walk = true;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour {
 
         done_button.gameObject.SetActive(false);
         spent_image.SetActive(false);
+        planes.SetActive(false);
 	}
 
 
@@ -107,7 +109,10 @@ public class GameManager : MonoBehaviour {
     public void card_done () {
         money += prize_money;
         done_button.gameObject.SetActive(false);
-        planes.SetActive(true);
+
+        if (day_index >= 2){
+            planes.SetActive(true);
+        }
         
         Destroy(current_card);
         cards_left --;

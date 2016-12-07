@@ -11,7 +11,6 @@ public class DayPlanner : MonoBehaviour {
     }
 
     public List<DayData> events = new List<DayData>();
-    int day_index = 0;
     GameManager gm;
 
 	void Start () {
@@ -49,14 +48,14 @@ public class DayPlanner : MonoBehaviour {
 
         GameManager.player.transform.position = gm.spawn_loc;
 
-        if (events.Count > day_index) {
-            gm.day_text.text = "DAY "+(day_index+1);
-            gm.buy_cards(events[day_index].money_spent);
-            GameManager.cards_left += events[day_index].cards_bought;
-            day_index ++;
+        if (events.Count > GameManager.day_index) {
+            gm.day_text.text = "DAY "+(GameManager.day_index+1);
+            gm.buy_cards(events[GameManager.day_index].money_spent);
+            GameManager.cards_left += events[GameManager.day_index].cards_bought;
+            GameManager.day_index ++;
         }
         else {
-            gm.day_text.text = "DAY "+(day_index+1);
+            gm.day_text.text = "DAY "+(GameManager.day_index+1);
             gm.buy_cards(1000);
             GameManager.cards_left += 20;
         }
