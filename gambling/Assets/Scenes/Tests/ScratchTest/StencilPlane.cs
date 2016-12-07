@@ -47,7 +47,7 @@ public class StencilPlane : MonoBehaviour {
 		for(int i = 0; i < segments; i++){
 			for(int j = 0; j< segments; j++){
 				verts.Add(new Vector3(i*width-.5f,0,j*width-.5f));
-				uvs.Add(new Vector2(i,j)); //For tracking click position
+				uvs.Add(new Vector2(i,j));
 				colors.Add(defaultColor);
 
 				if(i > 0 && j > 0){
