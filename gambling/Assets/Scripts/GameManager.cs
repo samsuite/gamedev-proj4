@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour {
 
         ScratchCard card_class = current_card.GetComponent<ScratchCard>();
         card_class.GenerateCard(price, value);
+
+        current_card.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
+
         can_walk = false;
     }
 
