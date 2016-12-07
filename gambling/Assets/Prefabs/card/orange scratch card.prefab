@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012946727234}
   - 212: {fileID: 212000012663870332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: card back png
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - 33: {fileID: 33000013471017436}
   - 65: {fileID: 65000012553796026}
   - 23: {fileID: 23000010399184644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stencil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42c3e27587720f4a85f09e68a966b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeable: 1
   segments: 15
   mesh: {fileID: 0}
   colors: []

@@ -16,12 +16,7 @@ public class ScratchCard : MonoBehaviour {
     public int cost;
 
 
-	void Start () {
-		GenerateCard (5, 17);
-	}
-
-
-	void GenerateCard(int card_cost, int card_reward){
+	public void GenerateCard(int card_cost, int card_reward){
 
         cost = card_cost;
         reward = card_reward;

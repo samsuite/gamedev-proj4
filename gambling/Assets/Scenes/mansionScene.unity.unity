@@ -117,6 +117,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1767226667}
+  - {fileID: 498135624}
   m_Father: {fileID: 0}
   m_RootOrder: 11
 --- !u!1 &10343760
@@ -985,6 +986,11 @@ Prefab:
     - target: {fileID: 4000011239937128, guid: 5ca711282f3fb16449b141f22c464415, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013704131188, guid: 5ca711282f3fb16449b141f22c464415,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca711282f3fb16449b141f22c464415, type: 2}
@@ -2958,6 +2964,397 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483440712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &498135623
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1501262}
+    m_Modifications:
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -16.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -19.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: startLocation.x
+      value: 9.890999
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: startLocation.z
+      value: -16.28906
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].destination.x
+      value: -5.274044
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].destination.z
+      value: -16.28906
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].destination.x
+      value: -5.249318
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].destination.z
+      value: -10.1742325
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].destination.x
+      value: 4.430141
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].destination.z
+      value: -9.730797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011750128618, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+      propertyPath: m_Name
+      value: Manager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].destination.x
+      value: 4.470366
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].destination.z
+      value: -10.15566
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].destination.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].destination.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].destination.x
+      value: -5.033083
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].destination.z
+      value: -10.390335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[7].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[8].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[8].destination.x
+      value: 9.845021
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[8].destination.z
+      value: -16.301533
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[9].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[9].destination.x
+      value: 56.296997
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[9].destination.z
+      value: -1.7188749
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[10].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[10].destination.x
+      value: 56.296997
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[10].destination.z
+      value: -1.7188749
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[10].destination.y
+      value: 0.07309341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[11].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[11].destination.x
+      value: 56.296997
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[11].destination.y
+      value: 0.07309341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[11].destination.z
+      value: -1.7188749
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[2].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[9].destination.y
+      value: 0.07309341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[8].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].destination.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: startLocation.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[7].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[7].destination.x
+      value: 9.475749
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[7].destination.y
+      value: 0.08107185
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[7].destination.z
+      value: -10.312589
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[5].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].destination.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].destination.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[6].destination.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[3].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[4].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[1].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: itinerary.Array.data[0].duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+        type: 2}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &498135624 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23,
+    type: 2}
+  m_PrefabInternal: {fileID: 498135623}
 --- !u!1 &505772817
 GameObject:
   m_ObjectHideFlags: 0
@@ -7392,7 +7789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.81
+      value: 30.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011315450286, guid: 97da1acedbde04b43a87b3a8f69e1d23, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7425,7 +7822,7 @@ Prefab:
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
       propertyPath: startLocation.x
-      value: 21.210999
+      value: 56.621
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
@@ -7445,7 +7842,7 @@ Prefab:
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
       propertyPath: itinerary.Array.data[0].destination.z
-      value: -3.1139169
+      value: -2.375607
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
@@ -7599,7 +7996,7 @@ Prefab:
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
       propertyPath: itinerary.Array.data[10].destination.z
-      value: -1.2086806
+      value: -2.1485934
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
@@ -7614,7 +8011,7 @@ Prefab:
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
       propertyPath: itinerary.Array.data[11].destination.x
-      value: 22.46811
+      value: 56.296997
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
@@ -7624,7 +8021,7 @@ Prefab:
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
       propertyPath: itinerary.Array.data[11].destination.z
-      value: -2.487567
+      value: -1.7188749
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250939098, guid: 97da1acedbde04b43a87b3a8f69e1d23,
         type: 2}
@@ -11529,7 +11926,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1913609390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.79, y: -0.2727623, z: -4.83}
+  m_LocalPosition: {x: -0.32793707, y: -0.2967062, z: -15.632252}
   m_LocalScale: {x: 31.43638, y: 0.5, z: 31.30211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []

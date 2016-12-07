@@ -55,10 +55,12 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
     void FixedUpdate(){
-        // we don't actually want to rotate using physics & we want to make sure nothing can apply torque to us
-        rb.angularVelocity = Vector3.zero;
+        if (GameManager.can_walk){
+            // we don't actually want to rotate using physics & we want to make sure nothing can apply torque to us
+            rb.angularVelocity = Vector3.zero;
 
-        // but we do want to MOVE using physics
-        rb.AddForce(moveVector);
+            // but we do want to MOVE using physics
+            rb.AddForce(moveVector);
+        }
     }
 }
