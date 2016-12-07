@@ -19,6 +19,7 @@ public class NPCPlanner : MonoBehaviour {
         public Vector3 destination;
     }
 
+    public bool loop = false;
 
     [HideInInspector]
     public List<NPCAction> itinerary = new List<NPCAction>();

@@ -12,6 +12,7 @@ ModelImporter:
     100008: glass1_MeshPart2
     100010: pCube2
     100012: //RootNode
+    100014: default
     400000: chip_bag_geo19
     400002: glass1
     400004: glass1_MeshPart0
@@ -19,21 +20,25 @@ ModelImporter:
     400008: glass1_MeshPart2
     400010: pCube2
     400012: //RootNode
+    400014: default
     2300000: chip_bag_geo19
     2300002: glass1_MeshPart0
     2300004: glass1_MeshPart1
     2300006: glass1_MeshPart2
     2300008: pCube2
+    2300010: default
     3300000: chip_bag_geo19
     3300002: glass1_MeshPart0
     3300004: glass1_MeshPart1
     3300006: glass1_MeshPart2
     3300008: pCube2
+    3300010: default
     4300000: chip_bag_geo19
     4300002: glass1_MeshPart0
     4300004: glass1_MeshPart1
     4300006: glass1_MeshPart2
     4300008: pCube2
+    4300010: default
   materials:
     importMaterials: 1
     materialName: 0

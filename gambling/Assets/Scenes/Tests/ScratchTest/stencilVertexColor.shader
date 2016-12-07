@@ -59,7 +59,7 @@ Shader "stenciledVertexColor" {
             float4 frag(VertexOutput vo) : COLOR {
 				//rb is x and z respect
                 float4 tColor = tex2D(_Overlay,TRANSFORM_TEX(vo.posWorld.rgb.rb, _Overlay));
-                clip((((tColor.a*_OverlayStrength)+vo.vertexColor.a)-_Cutoff) - 0.5);
+                clip((((tColor.r*_OverlayStrength)+vo.vertexColor.a)-_Cutoff) - 0.5);
                 float3 finalColor = 0;
                 return fixed4(finalColor,1);
             }
