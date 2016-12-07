@@ -18,7 +18,12 @@ public class StencilPlane : MonoBehaviour {
 	void Update () {
 		
 	}
+	//Changed by ScratchRay, do not edit;
+	public float colorRatio = 0;
+	//Called when colors are changed
+	public virtual void changedColors(){
 
+	}
 	void CreatePlane(){
 		mesh = new Mesh();
 		GetComponent<MeshFilter>().mesh = mesh;
