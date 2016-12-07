@@ -5,48 +5,118 @@ using System.Linq;
 
 public class ScratchCard : MonoBehaviour {
 
-	public GameObject baseCardItem;
-	public GameObject[] icons;
+    public GameObject win_1;
+	public GameObject win_5;
+    public GameObject win_10;
+    public GameObject lose;
 
-	// Use this for initialization
+    [HideInInspector]
+    public int reward;
+    [HideInInspector]
+    public int cost;
+
+
 	void Start () {
-		transform.parent = Camera.main.transform;
-		GenerateCard (5);
+		GenerateCard (5, 17);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//transform.position = Vector3.Lerp (transform.position, new Vector3 (0, 5f, 0), Time.deltaTime);
-		//transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
-	
-	}
-	void GenerateCard(int cost, int reward = 0){
-		int rows = 4;
-		int columns = 3;
-		//Create back of card
-		//Middle
-		int winningSymbols = 2;
-		List<GameObject> winningIcons = new List<GameObject> (icons);
-		List<GameObject> prefabs = new List<GameObject> (icons);
-		for (int i = 0; i < winningSymbols; i++) {
-			int item = (int)Random.Range (0, winningIcons.Count);
-			prefabs.Add (winningIcons [item]);
-			winningIcons.RemoveAt (item);
-		}
 
-		for (int i = 0; i < rows; i++) {
+
+	void GenerateCard(int card_cost, int card_reward){
+
+        cost = card_cost;
+        reward = card_reward;
+
+        int rows = 3;
+		int columns = 2;
+
+        int[,] positions = new int[columns, rows];
+
+        for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
-				GameObject go = (GameObject)Instantiate (baseCardItem, Vector3.zero, Quaternion.identity,gameObject.transform);
+                positions[j,i] = 0;
+            }
+        }
+
+
+
+        if (reward > 60){
+            //uh oh -- there's not enough room on the card for that many wins
+            print ("ERROR - card reward can't be over $60");
+            return;
+        }
+        else {
+            while (card_reward >= 10){
+
+                int x = Random.Range(0,columns);
+                int y = Random.Range(0,rows);
+
+                while (positions[x,y] != 0) {
+                    x = Random.Range(0,columns);
+                    y = Random.Range(0,rows);
+                }
+
+                positions[x,y] = 10;
+                card_reward -= 10;
+            }
+
+            while (card_reward >= 5){
+
+                int x = Random.Range(0,columns);
+                int y = Random.Range(0,rows);
+
+                while (positions[x,y] != 0) {
+                    x = Random.Range(0,columns);
+                    y = Random.Range(0,rows);
+                }
+
+                positions[x,y] = 5;
+                card_reward -= 5;
+            }
+
+            while (card_reward >= 1){
+
+                int x = Random.Range(0,columns);
+                int y = Random.Range(0,rows);
+
+                while (positions[x,y] != 0) {
+                    x = Random.Range(0,columns);
+                    y = Random.Range(0,rows);
+                }
+
+                positions[x,y] = 1;
+                card_reward -= 1;
+            }
+        }
+
+
+        for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+
+                GameObject go;
+
+                switch (positions[j,i]){
+                    case 10:
+                        go = (GameObject)Instantiate(win_10);
+                        break;
+                    case 5:
+                        go = (GameObject)Instantiate(win_5);
+                        break;
+                    case 1:
+                        go = (GameObject)Instantiate(win_1);
+                        break;
+                    default:
+                        go = (GameObject)Instantiate(lose);
+                        break;
+                }
+
+                Vector3 pos = new Vector3(-4.15f+j*8.1f, -7f+i*5f, 0f);
+
 				go.name = i+" "+j;
-				go.transform.localPosition = new Vector3 (i * 1f, j * 1f, 0);
-				bool winner = false;
-				if (winner) {
-					//Text differnt, matches a icon
-				} else {
-				//Make icon not match
-				}
-			}	
-		}
-		//Front (add scratch effect here)
+                go.transform.parent = this.transform;
+				go.transform.localPosition = pos;
+                go.transform.localRotation = Quaternion.identity;
+            }
+        }
+
 	}
 }
