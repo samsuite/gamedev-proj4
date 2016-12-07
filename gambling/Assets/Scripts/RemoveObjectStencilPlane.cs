@@ -2,10 +2,15 @@
 using System.Collections;
 
 public class RemoveObjectStencilPlane : StencilPlane {
-	public Collider colliderToRemove;
+	public Collider[] collidersToRemove;
 	public float removeAtRatio = .5f;
 	public override void changedColors ()
 	{
-		colliderToRemove.enabled = (colorRatio < removeAtRatio);
+		if (colorRatio >= removeAtRatio) {
+			for (int i = 0; i < collidersToRemove.Length; i++) {
+				collidersToRemove [i].enabled = false;
+			}
+		}
+		//colliderToRemove.enabled = (colorRatio < removeAtRatio);
 	}
 }
