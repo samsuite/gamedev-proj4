@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if(Physics.Raycast(ray, out hit, 9999f, clickLayerMask)){
                 moveVector = hit.point - transform.position;
+                moveVector.y = 0;
             }
             // make sure the ground plane is on the correct layer -- otherwise this raycast won't detect it
 
