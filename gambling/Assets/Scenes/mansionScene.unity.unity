@@ -1170,6 +1170,11 @@ Prefab:
       propertyPath: done_button_inp
       value: 
       objectReference: {fileID: 998692642}
+    - target: {fileID: 114000013704131188, guid: 5ca711282f3fb16449b141f22c464415,
+        type: 2}
+      propertyPath: planes_inp
+      value: 
+      objectReference: {fileID: 2049693144}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca711282f3fb16449b141f22c464415, type: 2}
   m_IsPrefabParent: 0
@@ -2947,6 +2952,7 @@ Transform:
   - {fileID: 30310079}
   - {fileID: 1153853002}
   - {fileID: 603804639}
+  - {fileID: 1543206345}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!1001 &455287438
@@ -8104,7 +8110,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 89.981, y: 0, z: -46.711002}
   m_Children: []
   m_Father: {fileID: 449137145}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!23 &1153853003
 MeshRenderer:
   m_ObjectHideFlags: 0
