@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour {
     public static GameObject player;
     public static GameObject camera;
     public static int money = 150;
-    public static int cards_left = 0;
+    public static int cards_left = 3;
     public static int day = 0;
     public static bool can_walk = true;
+    public static bool scratching_card = false;
 
     bool showing_spent = false;
     float spent_timer = 0f;
@@ -30,12 +31,15 @@ public class GameManager : MonoBehaviour {
     public static GameObject card;
     public Button done_button_inp;
     public static Button done_button;
+    public GameObject planes_inp;
+    public static GameObject planes;
 
 	void Awake () {
 	    player = GameObject.FindGameObjectWithTag("Player");
         camera = Camera.main.gameObject;
         card = card_inp;
         done_button = done_button_inp;
+        planes = planes_inp;
 
         done_button.gameObject.SetActive(false);
         spent_image.SetActive(false);
@@ -74,28 +78,35 @@ public class GameManager : MonoBehaviour {
     }
 
     public static void scratch_card (int price, int value) {
-        prize_money = value;
-        money -= price;
+        if (!scratching_card){
+            prize_money = value;
+            money -= price;
+            cards_left --;
         
-        current_card = Instantiate(card);
-        current_card.transform.position = camera.transform.position + camera.transform.forward*5f;
-        current_card.transform.LookAt(camera.transform.position);
-        current_card.transform.forward *= -1f; 
+            current_card = Instantiate(card);
+            current_card.transform.position = camera.transform.position + camera.transform.forward*5f;
+            current_card.transform.LookAt(camera.transform.position);
+            current_card.transform.forward *= -1f; 
 
-        ScratchCard card_class = current_card.GetComponent<ScratchCard>();
-        card_class.GenerateCard(price, value);
+            ScratchCard card_class = current_card.GetComponent<ScratchCard>();
+            card_class.GenerateCard(price, value);
 
-        current_card.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
-        done_button.gameObject.SetActive(true);
+            current_card.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
+            done_button.gameObject.SetActive(true);
+            planes.SetActive(false);
 
-        can_walk = false;
+            can_walk = false;
+            scratching_card = true;
+        }
     }
 
     public void card_done () {
         money += prize_money;
         done_button.gameObject.SetActive(false);
+        planes.SetActive(true);
         
         Destroy(current_card);
         can_walk = true;
+        scratching_card = false;
     }
 }
