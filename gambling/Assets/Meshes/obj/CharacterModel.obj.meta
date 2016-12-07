@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 5a4c8247779fde74cb0fb3b221a19adf
-timeCreated: 1481085781
+guid: 15757deb1278f3d46a2dce2644b4dd6f
+timeCreated: 1481094380
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: default
+    100002: PC
     400000: //RootNode
-    400002: default
-    2300000: default
-    3300000: default
-    4300000: default
+    400002: PC
+    2300000: PC
+    3300000: PC
+    4300000: PC
   materials:
     importMaterials: 1
     materialName: 0
@@ -52,8 +52,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 21
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
