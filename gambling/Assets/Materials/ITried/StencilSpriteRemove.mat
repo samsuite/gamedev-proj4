@@ -6,15 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD:gambling/Assets/Materials/ITried/StencilSpriteRemove.mat
   m_Name: StencilSpriteRemove
   m_Shader: {fileID: 4800000, guid: 87f4a23fe2711ce49b6fd94f76d84b4b, type: 3}
   m_ShaderKeywords: PIXELSNAP_ON _EMISSION
-=======
-  m_Name: stencilWorld
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
->>>>>>> origin/master:gambling/Assets/Scenes/Tests/ScratchTest/stencilWorld.mat
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
