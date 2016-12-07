@@ -6,8 +6,8 @@ using System.Linq;
 public class StencilPlane : MonoBehaviour {
 	
 	public int segments = 10;
-	Mesh mesh;
-	List<Color32> colors;
+	public Mesh mesh;
+	public List<Color32> colors;
 
 	// Use this for initialization
 	void Start () {
@@ -16,18 +16,7 @@ public class StencilPlane : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButton(0)){
-			RaycastHit hit;
-			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition),out hit)){
-				Vector3 point = (hit.transform.InverseTransformPoint(hit.point) + new Vector3(.5f,0,.5f))*segments;
-				Debug.Log(point);
-				int x = (int)point.z;
-				int y = ((int)point.x)*segments;
-				colors[x+y] = new Color32(255,255,255,255);
-				mesh.SetColors(colors);
-				mesh.UploadMeshData(false);
-			}
-		}
+		
 	}
 
 	void CreatePlane(){
