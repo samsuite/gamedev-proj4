@@ -23,7 +23,7 @@ GameObject:
   - 33: {fileID: 33000014148221504}
   - 65: {fileID: 65000011790203776}
   - 23: {fileID: 23000011311344074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stencil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,3 +103,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segments: 20
+  mesh: {fileID: 0}
+  colors: []
