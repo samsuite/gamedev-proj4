@@ -6,7 +6,7 @@
                 Ref 1
                 ReadMask 1
                 WriteMask 1
-                Comp NotEqual
+                Comp Equal
             }
          CGPROGRAM
          #pragma vertex vert

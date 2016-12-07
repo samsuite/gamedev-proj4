@@ -6,9 +6,15 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: zOutline
-  m_Shader: {fileID: 4800000, guid: 5b45710af69b0f24585f031a2d682491, type: 3}
+<<<<<<< HEAD:gambling/Assets/Materials/ITried/StencilSpriteRemove.mat
+  m_Name: StencilSpriteRemove
+  m_Shader: {fileID: 4800000, guid: 87f4a23fe2711ce49b6fd94f76d84b4b, type: 3}
+  m_ShaderKeywords: PIXELSNAP_ON _EMISSION
+=======
+  m_Name: stencilWorld
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
+>>>>>>> origin/master:gambling/Assets/Scenes/Tests/ScratchTest/stencilWorld.mat
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -71,8 +77,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _Brightness
-      second: 12.41
+        name: PixelSnap
+      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -116,9 +122,6 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
-        name: _Thickness
-      second: 1.17
-    - first:
         name: _UVSec
       second: 0
     - first:
@@ -127,7 +130,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.40936404, g: 1, b: 0.009000003, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

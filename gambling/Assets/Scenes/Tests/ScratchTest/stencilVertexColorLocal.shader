@@ -42,24 +42,24 @@ Shader "stenciledVertexColor" {
             uniform float _OverlayStrength;
             struct VertexInput {
                 float4 vertex : POSITION;
-				half2 uv : TEXCOORD0;
                 float4 vertexColor : COLOR;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
-                half2 uv : TEXCOORD0;
+                float4 posWorld : TEXCOORD0;
                 float4 vertexColor : COLOR;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput vo = (VertexOutput)0;
                 vo.vertexColor = v.vertexColor;
-                vo.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                vo.posWorld = mul(unity_ObjectToWorld, v.vertex);
+                //vo.pos = mul(UNITY_MATRIX_MVP, v.vertex );
                 return vo;
             }
             float4 frag(VertexOutput vo) : COLOR {
 				//rb is x and z respect
-                float4 tColor = tex2D(_Overlay,TRANSFORM_TEX(vo.uv, _Overlay));
-                clip((((tColor.a*_OverlayStrength)+vo.vertexColor.a)-_Cutoff) - 0.5);
+                float4 tColor = tex2D(_Overlay,TRANSFORM_TEX(vo.posWorld.rgb.rg, _Overlay));
+                clip((((tColor.r*_OverlayStrength)+vo.vertexColor.a)-_Cutoff) - 0.5);
                 float3 finalColor = 0;
                 return fixed4(finalColor,1);
             }
