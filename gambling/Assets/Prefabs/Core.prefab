@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011239937128}
   - 114: {fileID: 114000013704131188}
+  - 114: {fileID: 114000012938329528}
   m_Layer: 0
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: CORE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +41,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000012938329528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012478744204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cb14efed52f75479818a69c990ed50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: []
 --- !u!114 &114000013704131188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,4 +65,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money_text: {fileID: 0}
+  spent_image: {fileID: 0}
+  spent_text: {fileID: 0}
   card_inp: {fileID: 1000013223524840, guid: ac3f0ed6b3619ee47af2f889c02e28f5, type: 2}
+  done_button_inp: {fileID: 0}
+  planes_inp: {fileID: 0}
+  spawn_loc: {x: 15, y: 0, z: -2}
+  day_text: {fileID: 0}
