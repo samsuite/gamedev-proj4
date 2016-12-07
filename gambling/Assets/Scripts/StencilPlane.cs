@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class StencilPlane : MonoBehaviour {
-	
+	public bool changeable = true;
 	public int segments = 10;
 	public Mesh mesh;
 	public List<Color32> colors;

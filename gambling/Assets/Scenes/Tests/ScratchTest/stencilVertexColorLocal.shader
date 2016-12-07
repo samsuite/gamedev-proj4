@@ -1,4 +1,4 @@
-Shader "stenciledVertexColor" {
+Shader "stenciledVertexColorLocal" {
     Properties {
         _Overlay ("Overlay", 2D) = "white" {}
         _OverlayStrength ("OverlayStrength", Float ) = .90

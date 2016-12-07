@@ -17,7 +17,7 @@ public class ScratchRay : MonoBehaviour {
 				RaycastHit hit;
 				if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 1000f, layerMask)) {
 					StencilPlane sp = hit.transform.gameObject.GetComponent<StencilPlane> ();
-					if (sp != null) {
+					if (sp != null && sp.changeable) {
 						Vector3 point = (hit.transform.InverseTransformPoint (hit.point) + new Vector3 (.5f, 0, .5f)) * sp.segments;
 						int x = (int)point.z;
 						int y = ((int)point.x) * sp.segments;
