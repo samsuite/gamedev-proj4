@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public static GameObject player;
     public static GameObject camera;
     public static int money = 150;
-    public static int cards_left = 3;
+    public static int cards_left = 0;
     public static int day = 0;
     public static bool can_walk = true;
     public static bool scratching_card = false;
@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour {
     public static Button done_button;
     public GameObject planes_inp;
     public static GameObject planes;
+
+    public Vector3 spawn_loc;
+
+    public Text day_text;
 
 	void Awake () {
 	    player = GameObject.FindGameObjectWithTag("Player");
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour {
 
     public void buy_cards (int amount_spent) {
         spent_timer = 2f;
+        money -= amount_spent;
         showing_spent = true;
         spent_image.SetActive(true);
         spent_text.text = "YOU SPENT $"+amount_spent+" ON SCRATCH CARDS";
@@ -81,7 +86,6 @@ public class GameManager : MonoBehaviour {
         if (!scratching_card){
             prize_money = value;
             money -= price;
-            cards_left --;
         
             current_card = Instantiate(card);
             current_card.transform.position = camera.transform.position + camera.transform.forward*5f;
@@ -89,7 +93,7 @@ public class GameManager : MonoBehaviour {
             current_card.transform.forward *= -1f; 
 
             ScratchCard card_class = current_card.GetComponent<ScratchCard>();
-            card_class.GenerateCard(price, value);
+            card_class.GenerateCardRandom();
 
             current_card.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
             done_button.gameObject.SetActive(true);
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour {
         planes.SetActive(true);
         
         Destroy(current_card);
+        cards_left --;
         can_walk = true;
         scratching_card = false;
     }

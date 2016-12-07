@@ -11,16 +11,55 @@ public class DayPlanner : MonoBehaviour {
     }
 
     public List<DayData> events = new List<DayData>();
+    int day_index = 0;
+    GameManager gm;
 
 	void Start () {
-	    
+        gm = GameObject.FindGameObjectWithTag("CORE").GetComponent<GameManager>();
 
+        add_event(5, 1);
+        add_event(10, 2);
+        add_event(25, 4);
+        add_event(50, 8);
+        add_event(100, 10);
+        add_event(200, 12);
+        add_event(500, 15);
+
+        play_event();
 	}
+
+    void Update () {
+        if (GameManager.cards_left <= 0){
+            play_event();
+        }
+    }
 
 
     void add_event (int spent, int num_cards) {
         DayData new_event = new DayData();
         new_event.money_spent = spent;
         new_event.cards_bought = num_cards;
+
+        events.Add(new_event);
     }
+
+
+
+    void play_event () {
+
+        GameManager.player.transform.position = gm.spawn_loc;
+
+        if (events.Count > day_index) {
+            gm.day_text.text = "DAY "+(day_index+1);
+            gm.buy_cards(events[day_index].money_spent);
+            GameManager.cards_left += events[day_index].cards_bought;
+            day_index ++;
+        }
+        else {
+            gm.day_text.text = "DAY "+(day_index+1);
+            gm.buy_cards(1000);
+            GameManager.cards_left += 20;
+        }
+    }
+
 }

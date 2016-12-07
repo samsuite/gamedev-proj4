@@ -15,6 +15,15 @@ public class ScratchCard : MonoBehaviour {
     [HideInInspector]
     public int cost;
 
+    public void GenerateCardRandom(){
+        var rand = Random.value;
+        if (rand < 0.5f){
+            GenerateCard(0, 0);
+        }
+        else {
+            GenerateCard(0, Random.Range(1, 15));
+        }
+    }
 
 	public void GenerateCard(int card_cost, int card_reward){
 
