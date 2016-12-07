@@ -11,7 +11,7 @@ public class WorldToScreenUI : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		float z = transform.position.z;
 		Vector3 vec = Camera.main.WorldToScreenPoint(followTransform.position + offset);
 		transform.position = Vector3.Scale(vec,new Vector3(1f,1f,0)) + new Vector3(0,0,z);

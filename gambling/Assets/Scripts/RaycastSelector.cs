@@ -9,6 +9,7 @@ public class RaycastSelector : MonoBehaviour {
 	public LayerMask layerMask;
 	private GameObject lastObject;
 	void Start () {
+		
 	}
 
 	void Update () {
